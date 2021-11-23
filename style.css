@@ -10,33 +10,40 @@ body-bg: grey;
 body-color: blue;
 */
 
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  color: var(--color2);
-  background-color: var(--color1);
-  border-radius: calc(var(--size) * 2);
-  padding: calc(var(--size) / 2.5) calc(var(--size) * 1.2);
-  font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
-}
-
-strong {
-  color: var(--color4);
+html {
+  --purple0: #4E10BA;
+  --purple1: #8056C9;
+  --purple2: #6633BD;
+  --purple3: #3B0B8E;
+  --purple4: #2D076F;
+  
+  --blue0: #0878AF;
+  --blue1: #4D9BC1;
+  --blue2: #2A86B3;
+  --blue3: #055A84;
+  --blue4: #034767;
+  
+  --red0: #E20057;
+  --red1: #E8558E;
+  --red2: #E32C73;
+  --red3: #B40046;
+  --red4: #8D0037;
 }
 
 body {
-  --color1:#fc440f;
-  --color2:#1effbc;
-  --color3:#7c9299;
-  --color4:#1f01b9;
-  --color4-2:#5330fd;
-  --color5:#b4e33d;
+  --colorBg: var(--purple0);
+  --colorText: var(--purple4);
+  --colorHeader: var(--colorText);
+  --colorHeaderBg: var(--red0);
+  --colorMainBg: var(--blue1);
+
   --size: max(2vmin, 16px);
   margin: 0;
   padding: 0;
 
   font-size: var(--size);
-  color: var(--color4);
-  background-color: var(--color4);
+  color: var(--colorText);
+  background-color: var(--colorBg);
   font-family: Roboto, Helvetica, Arial, sans-serif;
 
   display: grid;
@@ -49,10 +56,22 @@ body {
 
 body * {grid-column: 1;}
 
+h1, h2, h3, h4, h5, h6 {
+  margin-left: auto; margin-right: auto;
+  max-width: max-content;
+  text-align: center;
+  color: var(--colorHeader);
+  background-color: var(--colorHeaderBg);
+  border-radius: calc(var(--size) * 2);
+  padding: calc(var(--size) / 2.5) calc(var(--size) * 1.2);
+  font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
+}
+
 #headerimg {
-  border: 5px solid var(--color1);
+  border: 5px solid var(--colorHeaderBg);
   border-radius: 50%;
   height: calc(var(--size) * 20);
+  aspect-ratio: 1 / 1;
 
   grid-row: 1;
 }
@@ -66,10 +85,11 @@ h1 {
 
 .mainblock {
   grid-row: 2/span 2;
-  background-color: var(--color3);
+  background-color: var(--colorMainBg);
   padding: 20px;
   border-radius: calc(var(--size) * 2);
   width: 80vw;
   min-width: 400px;
   max-width: 1000px;
+  text-align: center;
 }
