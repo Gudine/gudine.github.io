@@ -11,31 +11,32 @@ body-color: blue;
 */
 
 html {
-  --purple0: #4E10BA;
-  --purple1: #8056C9;
-  --purple2: #6633BD;
-  --purple3: #3B0B8E;
-  --purple4: #2D076F;
-  
-  --blue0: #0878AF;
-  --blue1: #4D9BC1;
-  --blue2: #2A86B3;
-  --blue3: #055A84;
-  --blue4: #034767;
-  
-  --red0: #E20057;
-  --red1: #E8558E;
-  --red2: #E32C73;
-  --red3: #B40046;
-  --red4: #8D0037;
+  --blue0: #335299;
+  --blue1: #778FC6;
+  --blue2: #4D69A9;
+  --blue3: #1C3C85;
+  --blue4: #0F2A69;
+
+  --red0: #E53B3B;
+  --red1: #FF8D8D;
+  --red2: #FD6262;
+  --red3: #C61818;
+  --red4: #9D0606;
+
+  --purple0: #732D99;
+  --purple1: #A872C6;
+  --purple2: #8647A9;
+  --purple3: #5D1684;
+  --purple4: #470A69;
 }
 
 body {
-  --colorBg: var(--purple0);
+  --colorBg: var(--blue4);
   --colorText: var(--purple4);
-  --colorHeader: var(--colorText);
-  --colorHeaderBg: var(--red0);
+  --colorHeader: var(--blue1);
+  --colorHeaderBg: var(--purple0);
   --colorMainBg: var(--blue1);
+  --colorAccent: var(--red3);
 
   --size: max(2vmin, 16px);
   margin: 0;
@@ -60,11 +61,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto; margin-right: auto;
   max-width: max-content;
   text-align: center;
-  color: var(--colorHeader);
-  background-color: var(--colorHeaderBg);
   border-radius: calc(var(--size) * 2);
   padding: calc(var(--size) / 2.5) calc(var(--size) * 1.2);
   font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  color: var(--colorHeader);
+  background-color: var(--colorHeaderBg);
+}
+
+h3, h4, h5, h6 {
+  color: var(--purple3);
 }
 
 #headerimg {
