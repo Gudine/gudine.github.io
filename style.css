@@ -48,48 +48,35 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-.filler {
-  height: 40px;
-}
-
 p {font-size: 1.1em}
-body * {grid-column: 1;}
 
 h1, h2, h3, h4, h5, h6 {
-  margin-left: auto; margin-right: auto;
   max-width: max-content;
   text-align: center;
   border-radius: calc(var(--size) * 2);
   padding: calc(var(--size) / 2.5) calc(var(--size) * 1.2);
   font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
-}
-
-h1, h2 {
+  margin: 0;
   color: var(--colorHeader);
   background-color: var(--colorHeaderBg);
-}
-
-h3, h4, h5, h6 {
-  color: var(--purple3);
-  font-family: 'Big Shoulders Text', Helvetica, Arial, sans-serif;
 }
 
 #headerimg {
   height: calc(var(--size) * 20);
 }
 
-h1 {
-  margin: 0;
-}
-
 .textblock {
   background-color: var(--colorMainBg);
   padding: 20px;
   border-radius: calc(var(--size) * 2);
+  text-align: center;
+  width: calc(100% - 40px);
+}
+
+.textblock.big {
   width: 80vw;
   min-width: 400px;
   max-width: 1000px;
-  text-align: center;
 }
 
 .halfsplit {
@@ -99,9 +86,14 @@ h1 {
   justify-items: center;
 }
 
+.halfsplit > * {
+  grid-column: 1;
+}
+
 .halfsplit > *:nth-child(1) {
   align-self: end;
   grid-row: 1/span 2;
+  z-index: 1;
 }
 
 .halfsplit > *:nth-child(2) {
@@ -109,8 +101,7 @@ h1 {
   grid-row: 2/span 2;
 }
 
-header {
-  z-index: 1;
+.headerstart {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +117,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 50px;
   z-index: 2;
 }
 
@@ -155,13 +146,14 @@ nav ul li a {
   font-family: 'Big Shoulders Text', Helvetica, Arial, sans-serif;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.2em;
 }
 
 .sublist {
   position: absolute;
   color: var(--colorHeader);
   width: 220px;
-  line-height: 1.5em;
+  line-height: 2em;
   display: none;
   left: 50%;
   transform: translate(-50%, 0);
@@ -178,8 +170,40 @@ li:hover .sublist {
 }
 
 .navheader {
-  height: 40px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.filler {
+  height: 50px;
+}
+
+/* Main Grid Definition */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--size) * 2);
+}
+
+div.anchor {
+  margin-top: -50px;
+  position: absolute;
+}
+
+.skillsgrid {
+  padding: 40px;
+  display: flex;
+  width: 80vw;
+  min-width: 400px;
+  max-width: 1000px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  row-gap: 40px;
+}
+
+.skillsgrid > * {
+  width: 45%;
 }
