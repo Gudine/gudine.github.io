@@ -113,7 +113,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--colorHeaderBg);
+  background-color: var(--purple3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,6 +193,7 @@ div.anchor {
   position: absolute;
 }
 
+/* Skills Grid Definition */
 .skillsgrid {
   padding: 40px;
   display: flex;
@@ -202,8 +203,124 @@ div.anchor {
   flex-flow: row wrap;
   justify-content: space-around;
   row-gap: 40px;
+  align-items: center;
+  border-radius: 100px;
+  border: 5px dotted var(--colorHeaderBg);
 }
 
 .skillsgrid > * {
   width: 45%;
+}
+
+/* Projects Grid Definition */
+.projectsgrid {
+  padding: 40px;
+  display: grid;
+  width: 80vw;
+  min-width: 400px;
+  max-width: 1000px;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  row-gap: 40px;
+  align-items: center;
+  border-radius: 100px;
+  border: 5px dotted var(--colorHeaderBg);
+}
+
+.projectsgrid > *:nth-child(odd) {
+  display: grid;
+  grid-template-columns: 2fr 70px 1fr;
+  width: 100%;
+  align-items: center;
+}
+
+.projectsgrid > *:nth-child(even) {
+  display: grid;
+  grid-template-columns: 1fr 70px 7fr;
+  width: 100%;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+  width: min-content;
+}
+
+figure img {
+  display: block;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 5px solid var(--colorMainBg);
+  width: calc(var(--size) * 18.5);
+}
+
+/* Footer Definitions */
+
+footer {
+  width: 100%;
+  background-color: var(--purple3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  z-index: 2;
+  padding: 10px;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  min-width: 400px;
+  max-width: 1000px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+footer ul li {
+  display: block;
+}
+
+footer ul li img {
+  height: 100%;
+}
+
+.sublist {
+  position: absolute;
+  color: var(--colorHeader);
+  width: 220px;
+  line-height: 2em;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sublist ul {
+  background-color: var(--colorText);
+  padding: 10px 0;
+
+}
+
+li:hover .sublist {
+  display: block;
+}
+
+.navheader {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filler {
+  height: 50px;
 }
