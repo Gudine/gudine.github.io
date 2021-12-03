@@ -1,14 +1,5 @@
+/**************** Initialization ****************/
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Big+Shoulders+Text:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/*header-bg: orange;
-header-color: cyan;
-
-start-bg: blue;
-start-star: cyan;
-
-body-bg: grey;
-body-color: blue;
-*/
 
 html {
   --blue0: #335299;
@@ -48,6 +39,7 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
+/******************** Common ********************/
 p {font-size: 1.1em}
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,10 +53,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--colorHeaderBg);
 }
 
-#headerimg {
-  height: calc(var(--size) * 20);
-}
-
 .textblock {
   background-color: var(--colorMainBg);
   padding: 20px;
@@ -75,7 +63,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .textblock.big {
   width: 80vw;
-  min-width: 400px;
   max-width: 1000px;
 }
 
@@ -101,14 +88,26 @@ h1, h2, h3, h4, h5, h6 {
   grid-row: 2/span 2;
 }
 
+/******************** Header ********************/
 .headerstart {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
 }
 
-/* Navbar Definitions */
+#headerimg {
+  height: calc(var(--size) * 20);
+}
 
+@media screen and (max-width: 400px) {
+  #headerimg {
+    max-width: 85%;
+    height: auto;
+  }
+}
+
+/******************** Navbar ********************/
 nav {
   position: fixed;
   top: 0;
@@ -126,7 +125,6 @@ nav > ul {
   flex-direction: row;
   justify-content: space-around;
   width: 80vw;
-  min-width: 400px;
   max-width: 1000px;
   margin: 0;
 }
@@ -149,10 +147,17 @@ nav ul li a {
   font-size: 1.2em;
 }
 
+.navheader {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .sublist {
   position: absolute;
   color: var(--colorHeader);
-  width: 220px;
+  width: calc(100% + 50px);
   line-height: 2em;
   display: none;
   left: 50%;
@@ -161,27 +166,18 @@ nav ul li a {
 
 .sublist ul {
   background-color: var(--colorText);
-  padding: 10px 0;
-
+  padding: 10px;
 }
 
-li:hover .sublist {
+nav li:hover .sublist {
   display: block;
-}
-
-.navheader {
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .filler {
   height: 50px;
 }
 
-/* Main Grid Definition */
-
+/****************** Main Grid *******************/
 main {
   display: flex;
   flex-direction: column;
@@ -193,61 +189,60 @@ div.anchor {
   position: absolute;
 }
 
-/* Skills Grid Definition */
-.skillsgrid {
+/***************** Skills Grid ******************/
+.skillsgrid, .projectsgrid {
+  box-sizing: border-box;
   padding: 40px;
-  display: flex;
-  width: 80vw;
-  min-width: 400px;
+  width: 90vw;
   max-width: 1000px;
-  flex-flow: row wrap;
-  justify-content: space-around;
   row-gap: 40px;
   align-items: center;
   border-radius: 100px;
   border: 5px dotted var(--colorHeaderBg);
+}
+
+@media screen and (max-width: 400px) {
+  .skillsgrid, .projectsgrid {
+    width: 100%;
+  }
+}
+
+.skillsgrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .skillsgrid > * {
   width: 45%;
 }
 
-/* Projects Grid Definition */
+@media screen and (max-width: 800px) {
+  .skillsgrid > * {
+    width: 100%;
+  }
+}
+
+/**************** Projects Grid *****************/
 .projectsgrid {
-  padding: 40px;
   display: grid;
-  width: 80vw;
-  min-width: 400px;
-  max-width: 1000px;
   grid-auto-flow: row;
   grid-template-columns: 1fr;
   justify-content: space-around;
-  row-gap: 40px;
-  align-items: center;
-  border-radius: 100px;
-  border: 5px dotted var(--colorHeaderBg);
 }
 
-.projectsgrid > *:nth-child(odd) {
+.projectsgrid > section {
   display: grid;
-  grid-template-columns: 2fr 70px 1fr;
   width: 100%;
   align-items: center;
 }
 
-.projectsgrid > *:nth-child(even) {
-  display: grid;
-  grid-template-columns: 1fr 70px 7fr;
-  width: 100%;
-  align-items: center;
-}
-
-figure {
+.projectsgrid > section > figure {
   margin: 0;
-  width: min-content;
 }
 
-figure img {
+.projectsgrid > section > figure > img {
+  box-sizing: border-box;
   display: block;
   border-radius: 40px;
   overflow: hidden;
@@ -255,17 +250,71 @@ figure img {
   width: calc(var(--size) * 18.5);
 }
 
-/* Footer Definitions */
+@media screen and (min-width: 801px) {
+  .projectsgrid > section:nth-child(odd) {
+    grid-template-columns: 2fr 70px 1fr;
+  }
+  .projectsgrid > section:nth-child(even) {
+    grid-template-columns: 1fr 70px 2fr;
+  }
 
+  .projectsgrid > section:nth-child(even) > * {
+    grid-row: 1;
+  }
+  .projectsgrid > section:nth-child(even) > .halfsplit {
+    grid-column: 3;
+  }
+  .projectsgrid > section:nth-child(even) > svg {
+    grid-column: 2;
+    transform: scaleX(-1);
+  }
+  .projectsgrid > section:nth-child(even) > figure {
+    grid-column: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projectsgrid {
+    padding: 40px;
+  }
+  .projectsgrid > section {
+    grid-auto-flow: column;
+    grid-template-rows: auto 35px auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .projectsgrid > section > * {
+    grid-column: 1;
+  }
+  .projectsgrid > section > .halfsplit {
+    grid-row: 3;
+  }
+  .projectsgrid > section > svg {
+    grid-row: 2;
+    transform: rotate(-90deg) scaleY(2);
+    max-height: 100%;
+  }
+  .projectsgrid > section > figure {
+    grid-row: 1;
+  }
+  .projectsgrid > section > figure > img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/******************** Footer ********************/
 footer {
   width: 100%;
   background-color: var(--purple3);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 60px;
   z-index: 2;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 footer > ul {
@@ -273,17 +322,11 @@ footer > ul {
   flex-direction: row;
   justify-content: space-around;
   width: 80vw;
-  min-width: 400px;
   max-width: 1000px;
   height: 100%;
   padding: 0;
   margin: 0;
-}
-
-nav ul {
   list-style: none;
-  padding-left: 0;
-  text-align: center;
 }
 
 footer ul li {
@@ -292,35 +335,4 @@ footer ul li {
 
 footer ul li img {
   height: 100%;
-}
-
-.sublist {
-  position: absolute;
-  color: var(--colorHeader);
-  width: 220px;
-  line-height: 2em;
-  display: none;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.sublist ul {
-  background-color: var(--colorText);
-  padding: 10px 0;
-
-}
-
-li:hover .sublist {
-  display: block;
-}
-
-.navheader {
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.filler {
-  height: 50px;
 }
