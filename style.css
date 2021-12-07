@@ -158,7 +158,8 @@ nav ul li a {
 .sublist {
   position: absolute;
   color: var(--colorHeader);
-  width: calc(100% + 50px);
+  min-width: calc(100% + 50px);
+  width: max-content;
   line-height: 2em;
   display: none;
   left: 50%;
