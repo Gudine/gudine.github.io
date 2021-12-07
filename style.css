@@ -34,9 +34,10 @@ body {
   padding: 0;
 
   font-size: var(--size);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   color: var(--colorText);
   background-color: var(--colorBg);
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(180deg, rgb(15, 42, 105) 0%, rgb(35, 5, 105) 100%);
 }
 
 /******************** Common ********************/
@@ -62,8 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .textblock.big {
-  width: 80vw;
-  max-width: 1000px;
+  width: 64vw;
+  max-width: 800px;
 }
 
 .halfsplit {
@@ -237,11 +238,15 @@ div.anchor {
   align-items: center;
 }
 
+.projectsgrid polygon {
+  fill:var(--colorMainBg);
+}
+
 .projectsgrid > section > figure {
   margin: 0;
 }
 
-.projectsgrid > section > figure > img {
+.projectsgrid > section > figure img {
   box-sizing: border-box;
   display: block;
   border-radius: 40px;
