@@ -1,0 +1,344 @@
+/**************** Initialization ****************/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Big+Shoulders+Text:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  --blue0: #335299;
+  --blue1: #778FC6;
+  --blue2: #4D69A9;
+  --blue3: #1C3C85;
+  --blue4: #0F2A69;
+
+  --red0: #E53B3B;
+  --red1: #FF8D8D;
+  --red2: #FD6262;
+  --red3: #C61818;
+  --red4: #9D0606;
+
+  --purple0: #732D99;
+  --purple1: #A872C6;
+  --purple2: #8647A9;
+  --purple3: #5D1684;
+  --purple4: #470A69;
+}
+
+body {
+  --colorBg: var(--blue4);
+  --colorText: var(--purple4);
+  --colorHeader: var(--blue1);
+  --colorHeaderBg: var(--purple0);
+  --colorMainBg: var(--blue1);
+  --colorAccent: var(--red3);
+
+  --size: min(25px, max(1vw, 16px));
+  margin: 0;
+  padding: 0;
+
+  font-size: var(--size);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: var(--colorText);
+  background-color: var(--colorBg);
+  background-image: linear-gradient(180deg, rgb(15, 42, 105) 0%, rgb(35, 5, 105) 100%);
+}
+
+/******************** Common ********************/
+p {font-size: 1.1em}
+
+h1, h2, h3, h4, h5, h6 {
+  max-width: max-content;
+  text-align: center;
+  border-radius: calc(var(--size) * 2);
+  padding: calc(var(--size) / 2.5) calc(var(--size) * 1.2);
+  font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: var(--colorHeader);
+  background-color: var(--colorHeaderBg);
+}
+
+.textblock {
+  background-color: var(--colorMainBg);
+  padding: 20px;
+  border-radius: calc(var(--size) * 2);
+  text-align: center;
+  width: calc(100% - 40px);
+}
+
+.textblock.big {
+  width: 64vw;
+  max-width: 800px;
+}
+
+.halfsplit {
+  display: grid;
+  grid-template-rows: min-content calc(var(--size) * 1.5) min-content;
+  grid-template-columns: 100%;
+  justify-items: center;
+}
+
+.halfsplit > * {
+  grid-column: 1;
+}
+
+.halfsplit > *:nth-child(1) {
+  align-self: end;
+  grid-row: 1/span 2;
+  z-index: 1;
+}
+
+.halfsplit > *:nth-child(2) {
+  align-self: start;
+  grid-row: 2/span 2;
+}
+
+/******************** Header ********************/
+.headerstart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+#headerimg {
+  height: calc(var(--size) * 20);
+}
+
+@media screen and (max-width: 400px) {
+  #headerimg {
+    max-width: 85%;
+    height: auto;
+  }
+}
+
+/******************** Navbar ********************/
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--purple3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  z-index: 2;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--colorHeader);
+  font-family: 'Big Shoulders Text', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.navheader {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sublist {
+  position: absolute;
+  color: var(--colorHeader);
+  min-width: calc(100% + 50px);
+  width: max-content;
+  line-height: 2em;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sublist ul {
+  background-color: var(--colorText);
+  padding: 10px;
+}
+
+nav li:hover .sublist {
+  display: block;
+}
+
+.filler {
+  height: 50px;
+}
+
+/****************** Main Grid *******************/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--size) * 2);
+}
+
+div.anchor {
+  margin-top: -50px;
+  position: absolute;
+}
+
+/***************** Skills Grid ******************/
+.skillsgrid, .projectsgrid {
+  box-sizing: border-box;
+  padding: 40px;
+  width: 90vw;
+  max-width: 1000px;
+  row-gap: 40px;
+  align-items: center;
+  border-radius: 100px;
+  border: 5px dotted var(--colorHeaderBg);
+}
+
+@media screen and (max-width: 400px) {
+  .skillsgrid, .projectsgrid {
+    width: 100%;
+  }
+}
+
+.skillsgrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.skillsgrid > * {
+  width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+  .skillsgrid > * {
+    width: 100%;
+  }
+}
+
+/**************** Projects Grid *****************/
+.projectsgrid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+}
+
+.projectsgrid > section {
+  display: grid;
+  width: 100%;
+  align-items: center;
+}
+
+.projectsgrid polygon {
+  fill:var(--colorMainBg);
+}
+
+.projectsgrid > section > figure {
+  margin: 0;
+}
+
+.projectsgrid > section > figure img {
+  box-sizing: border-box;
+  display: block;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 5px solid var(--colorMainBg);
+  width: calc(var(--size) * 18.5);
+}
+
+@media screen and (min-width: 801px) {
+  .projectsgrid > section:nth-child(odd) {
+    grid-template-columns: 2fr 70px 1fr;
+  }
+  .projectsgrid > section:nth-child(even) {
+    grid-template-columns: 1fr 70px 2fr;
+  }
+
+  .projectsgrid > section:nth-child(even) > * {
+    grid-row: 1;
+  }
+  .projectsgrid > section:nth-child(even) > .halfsplit {
+    grid-column: 3;
+  }
+  .projectsgrid > section:nth-child(even) > svg {
+    grid-column: 2;
+    transform: scaleX(-1);
+  }
+  .projectsgrid > section:nth-child(even) > figure {
+    grid-column: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projectsgrid {
+    padding: 40px;
+  }
+  .projectsgrid > section {
+    grid-auto-flow: column;
+    grid-template-rows: auto 35px auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .projectsgrid > section > * {
+    grid-column: 1;
+  }
+  .projectsgrid > section > .halfsplit {
+    grid-row: 3;
+  }
+  .projectsgrid > section > svg {
+    grid-row: 2;
+    transform: rotate(-90deg) scaleY(2);
+    max-height: 100%;
+  }
+  .projectsgrid > section > figure {
+    grid-row: 1;
+  }
+  .projectsgrid > section > figure > img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/******************** Footer ********************/
+footer {
+  width: 100%;
+  background-color: var(--purple3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  z-index: 2;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  max-width: 1000px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer ul li {
+  display: block;
+}
+
+footer ul li img {
+  height: 100%;
+}
