@@ -121,64 +121,6 @@ nav {
   z-index: 2;
 }
 
-/* nav > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80vw;
-  max-width: 1000px;
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  color: var(--colorHeader);
-  font-family: 'Big Shoulders Text', Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2em;
-}
-
-.navheader {
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.sublist {
-  position: absolute;
-  color: var(--colorHeader);
-  min-width: calc(100% + 50px);
-  width: max-content;
-  line-height: 2em;
-  display: none;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.sublist ul {
-  background-color: var(--colorText);
-  padding: 10px;
-}
-
-nav li:hover .sublist {
-  display: block;
-} */
-
-.filler {
-  height: 50px;
-}
-
 .left {
   display: flex;
   align-items: center;
@@ -203,28 +145,6 @@ nav li:hover .sublist {
   width: 35px;
   height: 5px;
   background-color: var(--colorHeader);
-}
-
-.logo a {
-  font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
-  color: var(--colorHeader);
-  font-size: 1.8em;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.lang {
-  color: var(--colorHeader);
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.lang div {
-  cursor: pointer;
 }
 
 .dropdown {
@@ -258,6 +178,32 @@ nav li:hover .sublist {
 
 .dropdown li ul {
   font-size: 0.85em;
+}
+
+.logo a {
+  font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
+  color: var(--colorHeader);
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lang {
+  color: var(--colorHeader);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang div {
+  cursor: pointer;
+}
+
+.filler {
+  height: 50px;
 }
 
 /****************** Main Grid *******************/
