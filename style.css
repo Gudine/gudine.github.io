@@ -63,7 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .textblock.big {
-  width: 64vw;
+  box-sizing: border-box;
+  width: 90%;
   max-width: 800px;
 }
 
@@ -101,13 +102,6 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(var(--size) * 20);
 }
 
-@media screen and (max-width: 400px) {
-  #headerimg {
-    max-width: 85%;
-    height: auto;
-  }
-}
-
 /******************** Navbar ********************/
 nav {
   position: fixed;
@@ -135,16 +129,12 @@ nav {
   justify-content: center;
   gap: 6px;
   cursor: pointer;
+  color: var(--colorHeader);
+  font-size: 2rem;
 }
 
 .menubars:hover, .menubars.active {
   background-color: var(--purple4);
-}
-
-.menubars div {
-  width: 35px;
-  height: 5px;
-  background-color: var(--colorHeader);
 }
 
 .dropdown {
@@ -230,12 +220,6 @@ div.anchor {
   border: 5px dotted var(--colorHeaderBg);
 }
 
-@media screen and (max-width: 400px) {
-  .skillsgrid, .projectsgrid {
-    width: 100%;
-  }
-}
-
 .skillsgrid {
   display: flex;
   flex-flow: row wrap;
@@ -244,12 +228,6 @@ div.anchor {
 
 .skillsgrid > * {
   width: 45%;
-}
-
-@media screen and (max-width: 800px) {
-  .skillsgrid > * {
-    width: 100%;
-  }
 }
 
 /**************** Projects Grid *****************/
@@ -283,30 +261,77 @@ div.anchor {
   width: calc(var(--size) * 18.5);
 }
 
-@media screen and (min-width: 801px) {
-  .projectsgrid > section:nth-child(odd) {
-    grid-template-columns: 2fr 70px 1fr;
-  }
-  .projectsgrid > section:nth-child(even) {
-    grid-template-columns: 1fr 70px 2fr;
+
+/******************** Footer ********************/
+footer {
+  width: 100%;
+  background-color: var(--purple3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 10px 10px 5px;
+  box-sizing: border-box;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  max-width: 600px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer ul li {
+  display: block;
+}
+
+footer ul li a {
+  color: white;
+  font-size: 2.5rem;
+}
+
+footer ul li img {
+  height: 100%;
+}
+
+/***************** Media Queries ****************/
+@media screen and (max-width: 420px) {
+  #headerimg {
+    max-width: 300px;
+    height: auto;
   }
 
-  .projectsgrid > section:nth-child(even) > * {
-    grid-row: 1;
+  h1 {
+    font-size: 1.6em;
   }
-  .projectsgrid > section:nth-child(even) > .halfsplit {
-    grid-column: 3;
+}
+
+@media screen and (max-width: 600px) {
+  .skillsgrid, .projectsgrid {
+    width: 100%;
+    border-radius: 0;
+    border-style: double;
+    border-left: none;
+    border-right: none;
+    background-color: #732d9940;
   }
-  .projectsgrid > section:nth-child(even) > svg {
-    grid-column: 2;
-    transform: scaleX(-1);
-  }
-  .projectsgrid > section:nth-child(even) > figure {
-    grid-column: 1;
+
+  .textblock.big {
+    width: 100%;
+    border-radius: 0;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .skillsgrid > * {
+    width: 100%;
+  }
+
   .projectsgrid {
     padding: 40px;
   }
@@ -337,35 +362,25 @@ div.anchor {
   }
 }
 
-/******************** Footer ********************/
-footer {
-  width: 100%;
-  background-color: var(--purple3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  z-index: 2;
-  padding: 10px;
-  box-sizing: border-box;
-}
+@media screen and (min-width: 801px) {
+  .projectsgrid > section:nth-child(odd) {
+    grid-template-columns: 2fr 70px 1fr;
+  }
+  .projectsgrid > section:nth-child(even) {
+    grid-template-columns: 1fr 70px 2fr;
+  }
 
-footer > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80vw;
-  max-width: 1000px;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-footer ul li {
-  display: block;
-}
-
-footer ul li img {
-  height: 100%;
+  .projectsgrid > section:nth-child(even) > * {
+    grid-row: 1;
+  }
+  .projectsgrid > section:nth-child(even) > .halfsplit {
+    grid-column: 3;
+  }
+  .projectsgrid > section:nth-child(even) > svg {
+    grid-column: 2;
+    transform: scaleX(-1);
+  }
+  .projectsgrid > section:nth-child(even) > figure {
+    grid-column: 1;
+  }
 }
