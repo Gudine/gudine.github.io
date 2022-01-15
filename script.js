@@ -1,16 +1,21 @@
 let lang = 'pt';
 
+let langData;
+fetch('lang.json')
+  .then((response) => response.json())
+  .then((data) => langData = data);
+
 const menubars = document.querySelector('.menubars');
 const dropdown = document.querySelector('.dropdown');
 const langBtns = [...document.querySelectorAll('.lang div')];
 
-document.body.addEventListener('click', function() {
+document.body.addEventListener('click', () => {
   menubars.classList.remove('active');
 });
-dropdown.addEventListener('click', function(ev) {
+dropdown.addEventListener('click', (ev) => {
   ev.stopPropagation();
 });
-menubars.addEventListener('click', function(ev) {
+menubars.addEventListener('click', (ev) => {
   menubars.classList.toggle('active');
   ev.stopPropagation();
 });

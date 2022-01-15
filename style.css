@@ -52,6 +52,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--colorHeader);
   background-color: var(--colorHeaderBg);
+  display: flex;
+  align-items: center;
+}
+
+.trybe {
+  height: 1em;
+  margin-right: 8px;
 }
 
 .textblock {
