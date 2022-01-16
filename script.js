@@ -32,8 +32,27 @@ function updateGroupLang(group, elems) {
   }
 }
 
+function updateProjectsAlt() {
+  const projects = [...document.querySelectorAll('.projectsgrid section')];
+  for (const proj of projects) {
+    const name = proj.children[0].children[0].children[1].innerText;
+    proj.children[2].children[0].children[0].alt = name;
+  }
+}
+
+function updateIcons() {
+  [...document.querySelectorAll('figcaption i')].forEach((elem) => {
+    elem.title = langData[lang]['icons'][elem.classList[1].slice(3)];
+    elem.nextElementSibling.innerText = langData[lang]['icons'][elem.classList[1].slice(3)];
+  });
+  [...document.querySelectorAll('.trybe')].forEach((elem) => {
+    elem.alt = langData[lang]['icons']['trybe'];
+    elem.title = langData[lang]['icons']['trybe'];
+  });
+}
+
 function updateLang() {
-  const headers = [...document.querySelectorAll('h1, h2, h3')];
+  const headers = [...document.querySelectorAll('h1, h2, h3, .subtitle')];
   const toc = [...document.querySelectorAll('.dropdown a')];
   const content = [...document.querySelectorAll('.textblock p')];
 
@@ -42,20 +61,13 @@ function updateLang() {
   updateGroupLang('content', content);
 
   updateProjectsAlt();
+  updateIcons();
 }
 
 function changeLang(ev) {
-  let newLang = ev.target.innerText.toLowerCase();
+  const newLang = ev.target.innerText.toLowerCase();
   if (newLang != lang) {
     lang = newLang;
     updateLang();
-  }
-}
-
-function updateProjectsAlt() {
-  let projects = [...document.querySelectorAll('.projectsgrid section')];
-  for (proj of projects) {
-    let name = proj.children[0].children[0].children[1].innerText;
-    proj.children[2].children[0].children[0].alt = name;
   }
 }

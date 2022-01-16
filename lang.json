@@ -8,6 +8,7 @@
       "HTML",
       "CSS",
       "Projetos",
+      "Clique na imagem para acessar a página do projeto.",
       "Exercícios da Trybe",
       "Trybewarts",
       "Carta Misteriosa",
@@ -51,7 +52,14 @@
       "O primeiro projeto que integra o HTML/CSS com JavaScript, com o intuito de possibilitar que o usuário faça desenhos simples em pixels, com uma pequena variedade de cores e algumas configurações disponíveis.",
       "Esse foi um projeto feito exclusivamente com JavaScript, pensado para testar as minhas habilidades no mesmo, fazendo várias funções simples que seguem as especificações dadas. A página web que interpreta os comandos foi feita posteriormente.",
       "Esse foi o meu primeiro projeto feito na Trybe, e exibe minhas habilidades básicas de HTML e CSS, sem fazer uso de opções mais avançadas como Flex/Grid ou HTML semântico."
-    ]
+    ],
+    "icons": {
+      "html5": "Este projeto utiliza HTML.",
+      "css3-alt": "Este projeto utiliza CSS.",
+      "js": "Este projeto utiliza JavaScript.",
+      "trybe": "Este é um projeto da Trybe.",
+      "user": "Este é um projeto pessoal."
+    }
   },
   "en": {
     "headers": [
@@ -62,6 +70,7 @@
       null,
       null,
       "Projects",
+      "Click on the image to access the project page.",
       "Trybe Exercises",
       null,
       "Mystery Letter",
@@ -105,6 +114,13 @@
       "The first project that integrates HTML/CSS with JavaScript, with the objective of allowing for the user to make simple pixel drawings, with a small variety of colors and some available settings.",
       "This was a project made exclusively with JavaScript, in order to test my abilities in it, making various simple functions that follow the given specifications. The webpage that interpretes the commands was made afterwards.",
       "This was the first project I made at Trybe, and it displays my basic HTML and CSS skills, not making use of more advanced options like Flex/Grid or semantic HTML."
-    ]
+    ],
+    "icons": {
+      "html5": "This project uses HTML.",
+      "css3-alt": "This project uses CSS.",
+      "js": "This project uses JavaScript.",
+      "trybe": "This is a Trybe project.",
+      "user": "This is a personal project."
+    }
   }
 }

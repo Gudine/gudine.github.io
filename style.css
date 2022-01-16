@@ -41,9 +41,20 @@ body {
 }
 
 /******************** Common ********************/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 p {font-size: 1.1em}
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .subtitle {
   max-width: max-content;
   text-align: center;
   border-radius: calc(var(--size) * 2);
@@ -56,9 +67,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.trybe {
-  height: 1em;
-  margin-right: 8px;
+.subtitle {
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: -22px;
 }
 
 .textblock {
@@ -242,10 +254,10 @@ div.anchor {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 1fr;
-  justify-content: space-around;
+  justify-items: center;
 }
 
-.projectsgrid > section {
+.projectsgrid section {
   display: grid;
   width: 100%;
   align-items: center;
@@ -255,17 +267,60 @@ div.anchor {
   fill:var(--colorMainBg);
 }
 
-.projectsgrid > section > figure {
+.projectsgrid figure {
   margin: 0;
-}
-
-.projectsgrid > section > figure img {
-  box-sizing: border-box;
-  display: block;
+  position: relative;
+  border: 5px solid var(--colorMainBg);
   border-radius: 40px;
   overflow: hidden;
-  border: 5px solid var(--colorMainBg);
+  width: max-content;
+}
+
+.projectsgrid figure a img {
+  box-sizing: border-box;
+  display: block;
   width: calc(var(--size) * 18.5);
+}
+
+.projectsgrid figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  user-select: none;
+}
+
+.projectsgrid figure figcaption > div {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(15, 42, 105, 0.8); /* --colorBG */
+  border-top: 3px solid var(--colorMainBg);
+  height: calc(var(--size) * 2);
+  display: flex;
+  align-items: center;
+}
+
+.projectsgrid figure figcaption i:nth-child(n+2) {
+  margin-left: calc(var(--size) / 3);
+}
+
+.projectsgrid figure figcaption .made-for {
+  right: 0;
+  border-top-left-radius: 15px;
+  border-left: 3px solid var(--colorMainBg);
+}
+
+.projectsgrid figure figcaption .tools-used {
+  left: 0;
+  border-top-right-radius: 15px;
+  border-right: 3px solid var(--colorMainBg);
+}
+
+.trybe {
+  height: 1em;
 }
 
 
