@@ -41,9 +41,20 @@ body {
 }
 
 /******************** Common ********************/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 p {font-size: 1.1em}
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .subtitle {
   max-width: max-content;
   text-align: center;
   border-radius: calc(var(--size) * 2);
@@ -52,6 +63,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--colorHeader);
   background-color: var(--colorHeaderBg);
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: -22px;
 }
 
 .textblock {
@@ -63,7 +82,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .textblock.big {
-  width: 64vw;
+  box-sizing: border-box;
+  width: 90%;
   max-width: 800px;
 }
 
@@ -101,13 +121,6 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(var(--size) * 20);
 }
 
-@media screen and (max-width: 400px) {
-  #headerimg {
-    max-width: 85%;
-    height: auto;
-  }
-}
-
 /******************** Navbar ********************/
 nav {
   position: fixed;
@@ -115,64 +128,87 @@ nav {
   width: 100%;
   background-color: var(--purple3);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 50px;
   z-index: 2;
 }
 
-nav > ul {
+.left {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80vw;
-  max-width: 1000px;
-  margin: 0;
+  align-items: center;
+  gap: 15px;
 }
 
-nav ul {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  color: var(--colorHeader);
-  font-family: 'Big Shoulders Text', Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2em;
-}
-
-.navheader {
+.menubars {
+  padding: 0 15px;
   height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.sublist {
-  position: absolute;
+  gap: 6px;
+  cursor: pointer;
   color: var(--colorHeader);
-  min-width: calc(100% + 50px);
-  width: max-content;
-  line-height: 2em;
+  font-size: 2rem;
+}
+
+.menubars:hover, .menubars.active {
+  background-color: var(--purple4);
+}
+
+.dropdown {
   display: none;
-  left: 50%;
-  transform: translate(-50%, 0);
+  position: fixed;
+  background-color: var(--purple4);
+  top: 50px;
+  width: max-content;
+  padding: 5px 20px 10px 0;
 }
 
-.sublist ul {
-  background-color: var(--colorText);
-  padding: 10px;
+.menubars.active ~ .dropdown {
+  display: initial;
 }
 
-nav li:hover .sublist {
-  display: block;
+.dropdown ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.dropdown li {
+  margin: 10px 0;
+}
+
+.dropdown a {
+  color: var(--colorHeader);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.dropdown li ul {
+  font-size: 0.85em;
+}
+
+.logo a {
+  font-family: 'Big Shoulders Display', Helvetica, Arial, sans-serif;
+  color: var(--colorHeader);
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lang {
+  color: var(--colorHeader);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang div {
+  cursor: pointer;
 }
 
 .filler {
@@ -203,12 +239,6 @@ div.anchor {
   border: 5px dotted var(--colorHeaderBg);
 }
 
-@media screen and (max-width: 400px) {
-  .skillsgrid, .projectsgrid {
-    width: 100%;
-  }
-}
-
 .skillsgrid {
   display: flex;
   flex-flow: row wrap;
@@ -219,21 +249,15 @@ div.anchor {
   width: 45%;
 }
 
-@media screen and (max-width: 800px) {
-  .skillsgrid > * {
-    width: 100%;
-  }
-}
-
 /**************** Projects Grid *****************/
 .projectsgrid {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 1fr;
-  justify-content: space-around;
+  justify-items: center;
 }
 
-.projectsgrid > section {
+.projectsgrid section {
   display: grid;
   width: 100%;
   align-items: center;
@@ -243,43 +267,133 @@ div.anchor {
   fill:var(--colorMainBg);
 }
 
-.projectsgrid > section > figure {
+.projectsgrid figure {
   margin: 0;
-}
-
-.projectsgrid > section > figure img {
-  box-sizing: border-box;
-  display: block;
+  position: relative;
+  border: 5px solid var(--colorMainBg);
   border-radius: 40px;
   overflow: hidden;
-  border: 5px solid var(--colorMainBg);
+  width: max-content;
+}
+
+.projectsgrid figure a img {
+  box-sizing: border-box;
+  display: block;
   width: calc(var(--size) * 18.5);
 }
 
-@media screen and (min-width: 801px) {
-  .projectsgrid > section:nth-child(odd) {
-    grid-template-columns: 2fr 70px 1fr;
-  }
-  .projectsgrid > section:nth-child(even) {
-    grid-template-columns: 1fr 70px 2fr;
+.projectsgrid figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  user-select: none;
+}
+
+.projectsgrid figure figcaption > div {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(15, 42, 105, 0.8); /* --colorBG */
+  border-top: 3px solid var(--colorMainBg);
+  height: calc(var(--size) * 2);
+  display: flex;
+  align-items: center;
+}
+
+.projectsgrid figure figcaption i:nth-child(n+2) {
+  margin-left: calc(var(--size) / 3);
+}
+
+.projectsgrid figure figcaption .made-for {
+  right: 0;
+  border-top-left-radius: 15px;
+  border-left: 3px solid var(--colorMainBg);
+}
+
+.projectsgrid figure figcaption .tools-used {
+  left: 0;
+  border-top-right-radius: 15px;
+  border-right: 3px solid var(--colorMainBg);
+}
+
+.trybe {
+  height: 1em;
+}
+
+
+/******************** Footer ********************/
+footer {
+  width: 100%;
+  background-color: var(--purple3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 10px 10px 5px;
+  box-sizing: border-box;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80vw;
+  max-width: 600px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer ul li {
+  display: block;
+}
+
+footer ul li a {
+  color: white;
+  font-size: 2.5rem;
+}
+
+footer ul li img {
+  height: 100%;
+}
+
+/***************** Media Queries ****************/
+@media screen and (max-width: 420px) {
+  #headerimg {
+    max-width: 300px;
+    height: auto;
   }
 
-  .projectsgrid > section:nth-child(even) > * {
-    grid-row: 1;
+  h1 {
+    font-size: 1.6em;
   }
-  .projectsgrid > section:nth-child(even) > .halfsplit {
-    grid-column: 3;
+}
+
+@media screen and (max-width: 600px) {
+  .skillsgrid, .projectsgrid {
+    width: 100%;
+    border-radius: 0;
+    border-style: double;
+    border-left: none;
+    border-right: none;
+    background-color: #732d9940;
   }
-  .projectsgrid > section:nth-child(even) > svg {
-    grid-column: 2;
-    transform: scaleX(-1);
-  }
-  .projectsgrid > section:nth-child(even) > figure {
-    grid-column: 1;
+
+  .textblock.big {
+    width: 100%;
+    border-radius: 0;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .skillsgrid > * {
+    width: 100%;
+  }
+
   .projectsgrid {
     padding: 40px;
   }
@@ -310,35 +424,25 @@ div.anchor {
   }
 }
 
-/******************** Footer ********************/
-footer {
-  width: 100%;
-  background-color: var(--purple3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  z-index: 2;
-  padding: 10px;
-  box-sizing: border-box;
-}
+@media screen and (min-width: 801px) {
+  .projectsgrid > section:nth-child(odd) {
+    grid-template-columns: 2fr 70px 1fr;
+  }
+  .projectsgrid > section:nth-child(even) {
+    grid-template-columns: 1fr 70px 2fr;
+  }
 
-footer > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80vw;
-  max-width: 1000px;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-footer ul li {
-  display: block;
-}
-
-footer ul li img {
-  height: 100%;
+  .projectsgrid > section:nth-child(even) > * {
+    grid-row: 1;
+  }
+  .projectsgrid > section:nth-child(even) > .halfsplit {
+    grid-column: 3;
+  }
+  .projectsgrid > section:nth-child(even) > svg {
+    grid-column: 2;
+    transform: scaleX(-1);
+  }
+  .projectsgrid > section:nth-child(even) > figure {
+    grid-column: 1;
+  }
 }
