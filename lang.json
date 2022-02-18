@@ -10,6 +10,7 @@
       "Projetos",
       "Clique na imagem para acessar a página do projeto.",
       "Exercícios da Trybe",
+      "Sistema Solar",
       "Carrinho de Compras",
       "Zoo Functions",
       "Testes Unitários em JavaScript",
@@ -31,6 +32,7 @@
       "CSS",
       "Projetos",
       "Exercícios da Trybe",
+      "Sistema Solar",
       "Carrinho de Compras",
       "Zoo Functions",
       "Testes Unitários em JavaScript",
@@ -50,6 +52,7 @@
       "HTML também é um conhecimento recente para mim, mas eu já conheço bastante dele. Sou capaz de criar páginas básicas e médias, fazendo uso de tags semânticas para facilitar a leitura por métodos alternativos.",
       "Mesmo que recente, acredito que meu conhecimento sobre CSS seja bem alto. Estou acostumado a usar Grid e Flex, e sei de muitos modos de conseguir uma aparência desejada. No entanto, meu senso de estética não é tão bom...",
       "Esses exercícios, feitos no decorrer do curso da Trybe, serviram para praticar as várias habilidades que foram adquiridas por mim. Inclui muitos exemplos de HTML, CSS, JavaScript, e irá incluir muito mais com o tempo.",
+      "Esse é um projeto feito para praticar meu conhecimento básico de React, e é feito inteiramente de componentes. A página é preenchida dinamicamente através de listas de planetas e missões, que são transformadas em elementos HTML através dos componentes criados.",
       "Esse é um projeto que simula uma página de compras, carregando informações de produtos de forma assíncrona através de uma API. Foi feito como uma espécie de 'desafio final' do módulo de Fundamentos da Trybe, envolvendo, além do assincronismo, uso de HOFs e conhecimento de HTML e DOM.",
       "Esse é um projeto no qual é possível acessar informações sobre o funcionamento de um zoológico. Foi feito para praticar o uso efetivo de informações de objetos, além do uso de HOFs (Funções de Ordem Elevada).",
       "Esse é um projeto feito para praticar meus conhecimentos de Jest, alternadamente criando funções para serem testadas e testes das funções. Também pratiquei o uso do TDD (Desenvolvimento Guiado por Testes).",
@@ -65,7 +68,8 @@
     "icons": {
       "html5": "Este projeto utiliza HTML.",
       "css3-alt": "Este projeto utiliza CSS.",
-      "js": "Este projeto utiliza JavaScript.",
+      "js": "Este projeto utiliza JavaScript Vanilla.",
+      "react": "Este projeto utiliza React.",
       "trybe": "Este é um projeto da Trybe.",
       "user": "Este é um projeto pessoal."
     }
@@ -81,6 +85,7 @@
       "Projects",
       "Click on the image to access the project page.",
       "Trybe Exercises",
+      "Solar System",
       "Shopping Cart",
       null,
       "JavaScript Unit Tests",
@@ -102,6 +107,7 @@
       null,
       "Projects",
       "Trybe Exercises",
+      "Solar System",
       "Shopping Cart",
       null,
       "JavaScript Unit Tests",
@@ -121,6 +127,7 @@
       "HTML is also a new development for me, but I already know a fair amount about it. I'm able to make simple and moderately complicated pages, making use of semantic tags to simplify reading through alternative methods.",
       "Though recent, I believe my knowledge about CSS is fairly large. I'm used to use Grid and Flex, and I know many ways of getting to the appearance I desire. However, my sense of aesthetic isn't all that good...",
       "These exercises, made during the Trybe course, were designed to practice the diverse skills I have acquired. There are many examples of HTML, CSS, JavaScript, and there'll be much more in the future.",
+      "This is a project made to practice my basic knowledge in React, and is made entirely out of components. The page is dynamically filled through planets and missions lists, which are transformed into HTML element through the created components.",
       "This is a project that simulates an e-commerce page, asynchronously loading product information through an API. It was made as a kind of 'final challenge' of Trybe's Fundamentals module, as it involves, on top of the asynchronism, use of HOFs and knowledge about HTML and DOM.",
       "This is a project in which it's possible to access information about the workings of a zoo. It was made to practice the effective use of object informations, as well as the use of HOFs (Higher Order Functions).",
       "This is a project made to practice my Jest knowledge by alternately creating functions to be tested and creating tests for functions. I've also practiced the use of TDD (Test-Driven Development).",
@@ -136,7 +143,8 @@
     "icons": {
       "html5": "This project uses HTML.",
       "css3-alt": "This project uses CSS.",
-      "js": "This project uses JavaScript.",
+      "js": "This project uses Vanilla JavaScript.",
+      "react": "This project uses React.",
       "trybe": "This is a Trybe project.",
       "user": "This is a personal project."
     }
