@@ -1,0 +1,128 @@
+/**************** Projects Grid *****************/
+.projectsgrid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.projectsgrid section {
+  display: grid;
+  width: 100%;
+  align-items: center;
+}
+
+.projectsgrid polygon {
+  fill:var(--colorMainBg);
+}
+
+.projectsgrid figure {
+  margin: 0;
+  position: relative;
+  border: 5px solid var(--colorMainBg);
+  border-radius: 40px;
+  overflow: hidden;
+  width: max-content;
+}
+
+.projectsgrid figure a img {
+  box-sizing: border-box;
+  display: block;
+  width: calc(var(--size) * 18.5);
+}
+
+.projectsgrid figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  user-select: none;
+}
+
+.projectsgrid figure figcaption > div {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(15, 42, 105, 0.8); /* --colorBG */
+  border-top: 3px solid var(--colorMainBg);
+  height: calc(var(--size) * 2);
+  display: flex;
+  align-items: center;
+}
+
+.projectsgrid figure figcaption i:nth-child(n+2) {
+  margin-left: calc(var(--size) / 3);
+}
+
+.projectsgrid figure figcaption .made-for {
+  right: 0;
+  border-top-left-radius: 15px;
+  border-left: 3px solid var(--colorMainBg);
+}
+
+.projectsgrid figure figcaption .tools-used {
+  left: 0;
+  border-top-right-radius: 15px;
+  border-right: 3px solid var(--colorMainBg);
+}
+
+.icon-trybe {
+  height: 1em;
+}
+
+/***************** Media Queries ****************/
+@media screen and (max-width: 800px) {
+  .projectsgrid {
+    padding: 40px;
+  }
+  .projectsgrid > section {
+    grid-auto-flow: column;
+    grid-template-rows: auto 35px auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .projectsgrid > section > * {
+    grid-column: 1;
+  }
+  .projectsgrid > section > .halfsplit {
+    grid-row: 3;
+  }
+  .projectsgrid > section > svg {
+    grid-row: 2;
+    transform: rotate(-90deg) scaleY(2);
+    max-height: 100%;
+  }
+  .projectsgrid > section > figure {
+    grid-row: 1;
+  }
+  .projectsgrid > section > figure > img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .projectsgrid > section:nth-child(odd) {
+    grid-template-columns: 2fr 70px 1fr;
+  }
+  .projectsgrid > section:nth-child(even) {
+    grid-template-columns: 1fr 70px 2fr;
+  }
+
+  .projectsgrid > section:nth-child(even) > * {
+    grid-row: 1;
+  }
+  .projectsgrid > section:nth-child(even) > .halfsplit {
+    grid-column: 3;
+  }
+  .projectsgrid > section:nth-child(even) > svg {
+    grid-column: 2;
+    transform: scaleX(-1);
+  }
+  .projectsgrid > section:nth-child(even) > figure {
+    grid-column: 1;
+  }
+}

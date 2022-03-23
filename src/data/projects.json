@@ -1,0 +1,210 @@
+[
+  {
+    "id": "exercises",
+    "url": "https://github.com/Gudine/trybe-exercicios/",
+    "tools": ["html", "css", "js", "react"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Exercícios da Trybe",
+        "desc": "Esses exercícios, feitos no decorrer do curso da Trybe, serviram para praticar as várias habilidades que foram adquiridas por mim. Inclui muitos exemplos de HTML, CSS, JavaScript, e irá incluir muito mais com o tempo."
+      },
+      "en_US": {
+        "name": "Trybe Exercises",
+        "desc": "These exercises, made during the Trybe course, were designed to practice the diverse skills I have acquired. There are many examples of HTML, CSS, JavaScript, and there'll be much more in the future."
+      }
+    }
+  },
+  {
+    "id": "lessons-learned",
+    "url": "https://gudine.github.io/trybe-projetos/1-lessons-learned",
+    "tools": ["html", "css"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Lições Aprendidas",
+        "desc": "Esse foi o meu primeiro projeto feito na Trybe, e exibe minhas habilidades básicas de HTML e CSS, sem fazer uso de opções mais avançadas como Flex/Grid ou HTML semântico."
+      },
+      "en_US": {
+        "name": "Lessons Learned",
+        "desc": "This was the first project I made at Trybe, and it displays my basic HTML and CSS skills, not making use of more advanced options like Flex/Grid or semantic HTML."
+      }
+    }
+  },
+  {
+    "id": "playground-functions",
+    "url": "https://gudine.github.io/trybe-projetos/2-playground-functions",
+    "tools": ["js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Playground Functions",
+        "desc": "Esse foi um projeto feito exclusivamente com JavaScript, pensado para testar as minhas habilidades no mesmo, fazendo várias funções simples que seguem as especificações dadas. A página web que interpreta os comandos foi feita posteriormente."
+      },
+      "en_US": {
+        "name": "Playground Functions",
+        "desc": "This was a project made exclusively with JavaScript, in order to test my abilities in it, making various simple functions that follow the given specifications. The webpage that interprets the commands was made afterwards."
+      }
+    }
+  },
+  {
+    "id": "pixels-art",
+    "url": "https://gudine.github.io/trybe-projetos/3-pixels-art",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Arte com Pixels",
+        "desc": "O primeiro projeto que integra o HTML/CSS com JavaScript, com o intuito de possibilitar que o usuário faça desenhos simples em pixels, com uma pequena variedade de cores e algumas configurações disponíveis."
+      },
+      "en_US": {
+        "name": "Pixels Art",
+        "desc": "The first project that integrates HTML/CSS with JavaScript, with the objective of allowing for the user to make simple pixel drawings, with a small variety of colors and some available settings."
+      }
+    }
+  },
+  {
+    "id": "todo-list",
+    "url": "https://gudine.github.io/trybe-projetos/4-todo-list",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Lista de Tarefas",
+        "desc": "Essa é uma página feita para disponibilizar ao usuário um lugar para anotar suas tarefas, com recursos simples como editar tarefas, mudar a ordem delas e marcá-las como finalizadas."
+      },
+      "en_US": {
+        "name": "To-do List",
+        "desc": "This is a page made to give the user a place to write down their tasks, with simple features such as editing tasks, changing their order and marking them as finished."
+      }
+    }
+  },
+  {
+    "id": "meme-generator",
+    "url": "https://gudine.github.io/trybe-projetos/5-meme-generator",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Gerador de Memes",
+        "desc": "Essa é uma página feita para permitir que o usuário crie memes. É possível escolher uma imagem (dentre algumas pré-selecionadas ou fazendo upload de uma) e digitar um texto que aparece em cima, além de escolher bordas para a imagem."
+      },
+      "en_US": {
+        "name": "Meme Generator",
+        "desc": "This is a page made to allow for the user to create memes. It's possible to choose an image (from a pre-selected group or by uploading one) and type some text that will appear on top, as well as choosing a border for the image."
+      }
+    }
+  },
+  {
+    "id": "color-guess",
+    "url": "https://gudine.github.io/trybe-projetos/6-color-guess",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Adivinhe a Cor",
+        "desc": "Esse é um pequeno jogo no qual uma cor é dada no formato rgb e o jogador deve clicar no círculo que contém a cor correta, ganhando ou perdendo pontos conforme vai jogando."
+      },
+      "en_US": {
+        "name": "Color Guess",
+        "desc": "This is a small game in which a color is given in rgb format and the player must click on the circle that contains the correct color, getting or losing points as they play."
+      }
+    }
+  },
+  {
+    "id": "mystery-letter",
+    "url": "https://gudine.github.io/trybe-projetos/7-mystery-letter",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Carta Misteriosa",
+        "desc": "Essa é uma página feita para simular uma carta misteriosa, que comummente é feita a partir de recortes de jornais e revistas. O usuário insere um texto na página, e a página exibe uma carta misteriosa com esse texto."
+      },
+      "en_US": {
+        "name": "Mystery Letter",
+        "desc": "This is a page made to simulate a mystery letter, which is commonly made from newspaper/magazine cutouts. The user inserts some text in the page, and it displays a mystery letter with that text."
+      }
+    }
+  },
+  {
+    "id": "trybewarts",
+    "url": "https://gudine.github.io/trybe-projetos/8-trybewarts",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Trybewarts",
+        "desc": "Essa é uma página baseada na fantástica escola de magia Trybewarts, uma paródia da franquia <cite>Harry Potter</cite> criada por J.K. Rowling. A página contém um grande formulário e possui algumas funções de JavaScript de cunho mais avançado."
+      },
+      "en_US": {
+        "name": "Trybewarts",
+        "desc": "This is a page based on the Trybewarts school of wizardry, a parody of the <cite>Harry Potter</cite> franchise created by J.K. Rowling. The page contains a big form and has some more advanced JavaScript functions."
+      }
+    }
+  },
+  {
+    "id": "js-unit-tests",
+    "url": "https://github.com/Gudine/trybe-projetos/tree/main/9-js-unit-tests",
+    "tools": ["js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Testes Unitários em JavaScript",
+        "desc": "Esse é um projeto feito para praticar meus conhecimentos de Jest, alternadamente criando funções para serem testadas e testes das funções. Também pratiquei o uso do TDD (Desenvolvimento Guiado por Testes)."
+      },
+      "en_US": {
+        "name": "JavaScript Unit Tests",
+        "desc": "This is a project made to practice my Jest knowledge by alternately creating functions to be tested and creating tests for functions. I've also practiced the use of TDD (Test-Driven Development)."
+      }
+    }
+  },
+  {
+    "id": "zoo-functions",
+    "url": "https://gudine.github.io/trybe-projetos/10-zoo-functions",
+    "tools": ["js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Zoo Functions",
+        "desc": "Esse é um projeto no qual é possível acessar informações sobre o funcionamento de um zoológico. Foi feito para praticar o uso efetivo de informações de objetos, além do uso de HOFs (Funções de Ordem Elevada)."
+      },
+      "en_US": {
+        "name": "Zoo Functions",
+        "desc": "This is a project in which it's possible to access information about the workings of a zoo. It was made to practice the effective use of object informations, as well as the use of HOFs (Higher Order Functions)."
+      }
+    }
+  },
+  {
+    "id": "shopping-cart",
+    "url": "https://gudine.github.io/trybe-projetos/11-shopping-cart",
+    "tools": ["html", "css", "js"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Carrinho de Compras",
+        "desc": "Esse é um projeto que simula uma página de compras, carregando informações de produtos de forma assíncrona através de uma API. Foi feito como uma espécie de 'desafio final' do módulo de Fundamentos da Trybe, envolvendo, além do assincronismo, uso de HOFs e conhecimento de HTML e DOM."
+      },
+      "en_US": {
+        "name": "Shopping Cart",
+        "desc": "This is a project that simulates an e-commerce page, asynchronously loading product information through an API. It was made as a kind of 'final challenge' of Trybe's Fundamentals module, as it involves, on top of the asynchronism, use of HOFs and knowledge about HTML and DOM."
+      }
+    }
+  },
+  {
+    "id": "solar-system",
+    "url": "https://gudine.github.io/trybe-projetos/12-solar-system",
+    "tools": ["css", "react"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Sistema Solar",
+        "desc": "Esse é um projeto feito para praticar meu conhecimento básico de React, e é feito inteiramente de componentes. A página é preenchida dinamicamente através de listas de planetas e missões, que são transformadas em elementos HTML através dos componentes criados."
+      },
+      "en_US": {
+        "name": "Solar System",
+        "desc": "This is a project made to practice my basic knowledge in React, and is made entirely out of components. The page is dynamically filled through planets and missions lists, which are transformed into HTML element through the created components."
+      }
+    }
+  }
+]
