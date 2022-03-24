@@ -1,16 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import projectsList from '../data/projects.json';
 import misc from '../data/misc.json';
 import Project from './Project';
 
-const ProjectsList = ({ lang }) => {
+const ProjectsList = () => {
   const { projects, projects_subtitle } = misc;
+  const lang = useSelector((state) => state.lang);
 
   const genProjects = () => {
     const projList = [projectsList[0], ...projectsList.slice(1).reverse()];
     return projList.map((project) => (
       <Project
-        lang={lang}
         key={project.id}
         project={project}
       />

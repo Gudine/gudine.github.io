@@ -1,15 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import skillsList from '../data/skills.json';
 import misc from '../data/misc.json';
 import Skill from './Skill';
 
-const SkillsList = ({ lang }) => {
+const SkillsList = () => {
+  const lang = useSelector((state) => state.lang);
   const { skills } = misc;
 
   const genSkills = () => {
     return skillsList.map((skill) => (
       <Skill
-        lang={lang}
         key={skill.id}
         skill={skill}
       />

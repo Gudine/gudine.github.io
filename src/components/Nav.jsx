@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import projectsList from '../data/projects.json';
 import skillsList from '../data/skills.json';
 import misc from '../data/misc.json';
 import Icon from './Icon';
 import './Nav.css';
 
-const Nav = ({ lang, changeLang }) => {
+const Nav = () => {
+  const lang = useSelector((state) => state.lang);
+  const dispatch = useDispatch();
+  const changeLang = (lang) => dispatch({ type: 'change-lang', lang });
+
   const [dropdown, changeDropdown] = useState(false);
   const projList = [projectsList[0], ...projectsList.slice(1).reverse()];
   const { start_toc, start_short, skills, projects } = misc;
@@ -19,7 +24,7 @@ const Nav = ({ lang, changeLang }) => {
     <nav>
       <div className="left">
         <div className={`menubars${dropdown ? ' active' : ''}`} onClick={handleMenuClick}>
-          <Icon id="menu" lang={lang} />
+          <Icon id="menu" />
         </div>
         
         <div className="dropdown">

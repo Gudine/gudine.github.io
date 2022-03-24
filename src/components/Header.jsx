@@ -1,10 +1,12 @@
 import Markdown from 'markdown-to-jsx';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import misc from '../data/misc.json';
 import face from '../img/face.png';
 import './Header.css';
 
-const Header = ({ lang }) => {
+const Header = () => {
+  const lang = useSelector((state) => state.lang);
   const { start, start_short, start_content } = misc;
 
   return (

@@ -1,0 +1,42 @@
+{
+  "trybe": {
+    "pt_BR": "Este é um projeto da Trybe.",
+    "en_US": "This is a Trybe project."
+  },
+  "menu": {
+    "pt_BR": "Menu",
+    "en_US": "Menu"
+  },
+  "personal": {
+    "pt_BR": "Este é um projeto pessoal.",
+    "en_US": "This is a personal project."
+  },
+  "email": {
+    "pt_BR": "E-mail",
+    "en_US": "E-mail"
+  },
+  "github": {
+    "pt_BR": "GitHub",
+    "en_US": "GitHub"
+  },
+  "linkedin": {
+    "pt_BR": "LinkedIn",
+    "en_US": "LinkedIn"
+  },
+  "html": {
+    "pt_BR": "Este projeto utiliza HTML.",
+    "en_US": "This project uses HTML."
+  },
+  "css": {
+    "pt_BR": "Este projeto utiliza Css.",
+    "en_US": "This project uses Css."
+  },
+  "js": {
+    "pt_BR": "Este projeto utiliza JavaScript Vanilla.",
+    "en_US": "This project uses Vanilla JavaScript."
+  },
+  "react": {
+    "pt_BR": "Este projeto utiliza React.",
+    "en_US": "This project uses React."
+  }
+}

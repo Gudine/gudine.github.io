@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { IconContext } from "react-icons";
+import React from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -8,21 +7,16 @@ import SkillsList from './components/SkillsList';
 import Header from './components/Header';
 
 function App() {
-  const [lang, changeLang] = useState('pt_BR');
-
   return (
-    <IconContext.Provider value={{ className: "icon" }}>
-      <Nav lang={ lang } changeLang={changeLang} />
+    <>
+      <Nav />
       <main>
-        <Header lang={ lang } />
-        <SkillsList lang={ lang } />
-        <ProjectsList lang={ lang } />
+        <Header />
+        <SkillsList />
+        <ProjectsList />
       </main>
-      {/*Header*/}
-      {/*SkillsList*/}
-      {/*Header*/}
       <Footer />
-    </IconContext.Provider>
+    </>
   );
 }
 

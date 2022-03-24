@@ -3,13 +3,15 @@ import Markdown from 'markdown-to-jsx';
 import projImages from '../img/projects';
 import Icon from './Icon';
 import './Project.css';
+import { useSelector } from 'react-redux';
 
 const Project = (props) => {
-  const { lang, project: { id, url, tools, made_for, text } } = props;
+  const lang = useSelector((state) => state.lang);
+  const { project: { id, url, tools, made_for, text } } = props;
   const { name, desc } = text[lang];
 
   const convertIcon = (elem) => (
-    <Icon key={elem} id={elem} lang={lang} />
+    <Icon key={elem} id={elem} />
   );
 
   return (
