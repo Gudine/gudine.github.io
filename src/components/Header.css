@@ -1,0 +1,23 @@
+/******************** Header ********************/
+.headerstart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+#headerimg {
+  height: calc(var(--size) * 20);
+}
+
+/***************** Media Queries ****************/
+@media screen and (max-width: 420px) {
+  #headerimg {
+    max-width: 300px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+}
