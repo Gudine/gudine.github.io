@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.570baa12.css",
+    "main.js": "./static/js/main.d71c532b.js",
+    "static/media/mystery-letter.png": "./static/media/mystery-letter.830c90c97aead467365a.png",
+    "static/media/face.png": "./static/media/face.7b867a2647687056a433.png",
+    "static/media/solar-system.png": "./static/media/solar-system.3b7f6c6262d3ce9e1b83.png",
+    "static/media/exercises.png": "./static/media/exercises.ea42431b87ca42208d2b.png",
+    "static/media/lessons-learned.png": "./static/media/lessons-learned.c1e050b2e4d902810245.png",
+    "static/media/shopping-cart.png": "./static/media/shopping-cart.ee590bbd603d8114a1f9.png",
+    "static/media/meme-generator.png": "./static/media/meme-generator.1d041f3a25bf091fbb72.png",
+    "static/media/js-unit-tests.png": "./static/media/js-unit-tests.e5875cbfdcc89e086a98.png",
+    "static/media/zoo-functions.png": "./static/media/zoo-functions.052964ed26731a0d28dd.png",
+    "static/media/playground-functions.png": "./static/media/playground-functions.adef700d0f3af4c68391.png",
+    "static/media/trybewarts.png": "./static/media/trybewarts.4653c591245eeca7f62f.png",
+    "static/media/todo-list.png": "./static/media/todo-list.a19366e04187c9b43026.png",
+    "static/media/color-guess.png": "./static/media/color-guess.fafb254e525d115f2747.png",
+    "static/media/pixels-art.png": "./static/media/pixels-art.0152a7637e067f83ee74.png",
+    "static/media/trybe.svg": "./static/media/trybe.e2c4486e944fb673d033562c90f20b14.svg",
+    "index.html": "./index.html",
+    "main.570baa12.css.map": "./static/css/main.570baa12.css.map",
+    "main.d71c532b.js.map": "./static/js/main.d71c532b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.570baa12.css",
+    "static/js/main.d71c532b.js"
+  ]
+}
