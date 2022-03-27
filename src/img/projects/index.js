@@ -12,6 +12,9 @@ import js_unit_tests from './js-unit-tests.png';
 import zoo_functions from './zoo-functions.png';
 import shopping_cart from './shopping-cart.png';
 import solar_system from './solar-system.png';
+import tryunfo from './tryunfo.png';
+import trybetunes from './trybetunes.png';
+import frontend_online_store from './frontend-online-store.png';
 
 const result = {
   'exercises': exercises,
@@ -27,6 +30,9 @@ const result = {
   'zoo-functions': zoo_functions,
   'shopping-cart': shopping_cart,
   'solar-system': solar_system,
+  'tryunfo': tryunfo,
+  'trybetunes': trybetunes,
+  'frontend-online-store': frontend_online_store,
 };
 
 export default result;

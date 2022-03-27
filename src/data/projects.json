@@ -140,7 +140,10 @@
       "en_US": {
         "name": "Trybewarts",
         "desc": "This is a page based on the Trybewarts school of wizardry, a parody of the <cite>Harry Potter</cite> franchise created by J.K. Rowling. The page contains a big form and has some more advanced JavaScript functions."
-      }
+      },
+      "collaborators": [
+        { "name": "Leonardo Begnossi", "linkedin": "leonardo-begnossi-41580a127" }
+      ]
     }
   },
   {
@@ -206,5 +209,59 @@
         "desc": "This is a project made to practice my basic knowledge in React, and is made entirely out of components. The page is dynamically filled through planets and missions lists, which are transformed into HTML element through the created components."
       }
     }
+  },
+  {
+    "id": "tryunfo",
+    "url": "https://gudine.github.io/trybe-projetos/13-tryunfo",
+    "tools": ["css", "js", "react"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Tryunfo",
+        "desc": "Este é um projeto que permite que o usuário crie uma carta, baseada no jogo Super Trunfo. Ele foi feito para praticar o uso de estados React e componentes controlados, transferindo informações de componente para componente."
+      },
+      "en_US": {
+        "name": "Tryunfo",
+        "desc": "This is a project that allows for the user to create a card, based on the Top Trumps game. It was made to practice the use of React states and controlled components, transferring information from component to component."
+      }
+    }
+  },
+  {
+    "id": "trybetunes",
+    "url": "https://gudine.github.io/trybe-projetos/14-trybetunes",
+    "tools": ["css", "js", "react"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "TrybeTunes",
+        "desc": "Esse é um projeto que usa a API do iTunes para fazer um aplicativo de músicas falso que contém pesquisa por artistas, músicas favoritas, perfis, etc. Ele foi feito usando o React Router, assim dividindo o projeto em várias páginas com um estado consistente."
+      },
+      "en_US": {
+        "name": "TrybeTunes",
+        "desc": "This is a project that uses the iTunes API to make a fake music app that supports artist search, favoriting songs, profiles, etc. It was made using React Router, thus splitting the application into several pages with a consistent state."
+      }
+    }
+  },
+  {
+    "id": "frontend-online-store",
+    "url": "https://gudine.github.io/trybe-projetos/15-frontend-online-store",
+    "tools": ["css", "js", "react"],
+    "made_for": "trybe",
+    "text": {
+      "pt_BR": {
+        "name": "Frontend de Loja Online",
+        "desc": "Esse é o primeiro projeto em grupo, que simula uma página de compras, espelhando o projeto do Carrinho de Compras feito anteriormente. Desta vez, no entanto, ele foi feito com uso das várias ferramentas do React, e como resultado contém muito mais páginas e recursos."
+      },
+      "en_US": {
+        "name": "Frontend Online Store",
+        "desc": "This is the first group project, one that simulates an e-commerce page, mirroring the concept of the Shopping Cart project that was previously made. This time, however, it was made using React's many features, and as a result has more pages and features."
+      }
+    },
+    "collaborators": [
+      { "name": "Laís Nametala", "linkedin": "laís-nametala" },
+      { "name": "Rafael Barbosa" },
+      { "name": "Rafaela Jordão", "linkedin": "jordaorafaela" },
+      { "name": "Bruno Alexandre" }
+    ]
   }
 ]
